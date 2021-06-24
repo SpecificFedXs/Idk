@@ -1,0 +1,26 @@
+local lib = loadstring(game:HttpGet("https://bit.ly/baconlib"))()
+local version, changelog = lib:GetInfo()
+local window = lib:CreateWindow("Admin HUB"..version)
+local label = lib:CreateLabel(window, "Main")
+
+local button = lib:CreateButton(window, "Load PHUB", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SpecificFedXs/PornHub/main/PornHubSource"))()
+end)
+
+local button = lib:CreateButton(window, "Load SHUB", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SpecificFedXs/Source1/main/Source"))()
+end)
+
+local drop = lib:CreateDropdown(window, "Admin Scripts")
+lib:NewDropdownButton(window, drop, "Load Fates Admin", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+end)
+
+lib:NewDropdownButton(window, drop, "Load Infinite Yield", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+lib:NewDropdownButton(window, drop, "Load CMD-X", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+end)
+
